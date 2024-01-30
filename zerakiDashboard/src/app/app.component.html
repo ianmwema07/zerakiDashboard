@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="for">
+    <div class="">
+      <h1 class="align-content-center p-5 zeraki-heading">
+        Zeraki e- Portal
+      </h1>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)"  class="log-in-form">
+      <div class="form-group">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Designation</label>
+          </div>
+          <select [(ngModel)]="loginDetails.designation" class="custom-select" id="inputGroupSelect01" name="designation">
+            <option value="1">Administrator</option>
+            <option value="2">Teacher</option>
+            <option value="3">Student</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input [(ngModel)]="loginDetails.userName" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter username" name="username">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input [(ngModel)]="loginDetails.password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+</div>
